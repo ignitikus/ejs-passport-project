@@ -52,6 +52,7 @@ app.use(passport.session())
 
 app.use((req,res,next) => {
   res.locals.user = req.user
+  res.locals.missingInfo = req.flash('missingInfo')
   res.locals.errors = req.flash('errorMessage')
   res.locals.success = req.flash('successMessage')
   next()
@@ -70,6 +71,7 @@ app.use(function(err, req, res, next) {
 // view engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+mongoose.set('useFindAndModify', false)
 
 app.use('/', indexRouter);
 

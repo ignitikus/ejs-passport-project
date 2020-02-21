@@ -5,6 +5,8 @@ const { check } = require('express-validator')
 
 const{
   home,
+  profile,
+  updateProfile,
   authOptions,
   userRegister,
   randomRender,
@@ -14,6 +16,7 @@ const{
 
 
 router.get('/', home);
+router.get('/auth/profile', profile)
 router.get('/auth/options', authOptions)
 router.get('/auth/random', randomRender)
 router.get('/auth/movies', moviesRender)
@@ -32,5 +35,7 @@ router.post('/api/users/register',
   check('password', 'Please include valid password').isLength({min:3})
   ], userRegister
 )
+
+router.post('/auth/profile/update', updateProfile)
 
 module.exports = router;

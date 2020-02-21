@@ -29,7 +29,9 @@
               <% } %>
               <% if (success.length>0) { %>
                 <%= success %> 
-              <% } %>
+              <% } else {%>
+                <%= missingInfo %>
+              <%} %>
             </div>
             <div class="panel-body">
               <div class="row">

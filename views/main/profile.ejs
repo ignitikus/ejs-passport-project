@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Options</title>
+      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <link rel='stylesheet' href='/stylesheets/option.css' />
+   </head>
+   <body>
+      <div class='main-div'>
+         <div class='options-container'>
+            <div class='options-sub'>
+               <% include ../partials/userAndBack %> 
+            </div>
+         </div>
+         <div class="well">
+            <ul class="nav nav-tabs">
+               <li class="active"><a href="#home" data-toggle="tab">Update Email</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+               <div class="tab-pane active in" id="home">
+                  <form id="tab" action="/auth/profile/update" method="post">
+                        <label>Name</label>
+                        <input type="text" placeholder="Type your new name" name="name" class="input-xlarge">
+                        <% if (success.length>0) { %>
+                           <%= success %> 
+                        <% } %>
+                        <div>
+                        <button class="btn btn-primary" >Update</button>
+                        </div>
+                  </form>
+               </div>
+         </div>
+         <% include ../partials/footer %>   
+      </div>
+   </body>
+</html>

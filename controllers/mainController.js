@@ -12,9 +12,28 @@ module.exports = {
       if(req.isAuthenticated()){
             return res.render('main/options')
       }
-      return res.render('main/index', { errors: 'Please input email and password',title: 'Sign in/ Sign Up' });
+      return res.render('main/index', { missingInfo: 'Please input email and password',title: 'Sign in/ Sign Up' });
    },
 
+   profile: (req,res) => {
+      if(req.isAuthenticated()){
+         return res.render('main/profile')
+      }
+      return res.render('main/403')
+   },
+
+   updateProfile: async(req,res) => {
+      if(req.isAuthenticated()){
+         try{
+            await User.findOneAndUpdate({_id:req.user._id}, {name:req.body.name}, {new:true})
+            return res.render('main/profile', {success: 'Successfully updated! To see change go back to options'})
+         }catch(error){
+            console.log(error)
+         }
+      }
+      return res.render('main/403')
+   },
+   
    authOptions: (req,res) => {
       if(req.isAuthenticated()){
          return res.render('main/options')
