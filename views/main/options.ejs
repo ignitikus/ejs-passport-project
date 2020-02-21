@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Options</title>
+      <link rel='stylesheet' href='/stylesheets/option.css' />
+   </head>
+   <body>
+      <div class='main-div'>
+         <div class='options-container'>
+            <div class='options-sub'>
+               <% include ../partials/user %> 
+            </div>
+         </div>
+         <section class="cards">
+            <div class="container">
+               <div class="card-container">
+                  <div class="card">
+                     <div class="card-image">
+                        <img src="/images/movies.jpg" width="200px" height="200px">
+                     </div>
+                     <p class="description">Latest movies playing in theaters right now.</p>
+                     <a href="/auth/movies" class="btn" alt="Using Slack">Movies</a>
+                  </div>
+               </div>
+               <div class="card-container">
+                  <div class="card">
+                     <div class="card-image">
+                        <img src="/images/people.png" width="200px" height="200px">
+                     </div>
+                     <p class="description">30 random individuals arranged in alphabetical order.
+                     </p>
+                     <a href="/auth/random" class="btn" alt="Team Administration">Random</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <% include ../partials/footer %>   
+      </div>
+   </body>
+</html>

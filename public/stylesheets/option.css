@@ -1,0 +1,211 @@
+body {
+   font-family: 'Lato', 'appleLogo', sans-serif;
+   color: #2C2D30;
+   font-size: 16px;
+   line-height: 1.5;
+   background-image: url('/images/soft-brickwall.jpg');
+}
+
+* {
+   margin: 0;
+	padding: 0;
+	border: 0;
+   box-sizing: border-box;
+}
+
+a, a:visited{
+   text-decoration: none;
+   color:white;
+}
+
+p{
+   outline-color:white;
+}
+
+.main-div{
+   height: 100vh;
+}
+
+.footer{
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 5px;
+   font-size: 1em;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   text-align: center;
+   scroll-snap-stop: normal;
+   scroll-snap-align: center;
+}
+
+.options-container{
+   display: flex;
+   width: 100vw;
+   justify-content: center;
+}
+
+
+.current-user{
+   width: 100vw;
+   padding: 5px;
+   text-align: center;
+   font-size: 1.5em;
+   color: aliceblue;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cards {
+   margin: 10% 0;
+}
+
+.cards .container {
+   max-width: 1100px;
+   margin: 0 auto;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+   /* vertical divider */
+@media screen and (min-width: 701px) {
+   .cards .container {
+      background-image:
+   url(//p6.zdassets.com/hc/theme_assets/138842/200037786//thinLine.png);
+      background-position: 49.8%;
+      background-repeat: no-repeat;
+      background-size: 1px 85%;
+   }
+}
+
+.cards .card-container {
+   display: inline-block;
+   width: 49.6%;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+/* for hover-effect */
+.cards .card-container:nth-child(1) {
+   -webkit-transform: translate(2px, 0);
+   -moz-transform: translate(2px, 0);
+   -ms-transform: translate(2px, 0);
+   -o-transform: translate(2px, 0);
+   transform: translate(2px, 0);
+}
+.cards .card-container:nth-child(2) {
+   -webkit-transform: translate(-3px, 0);
+   -moz-transform: translate(-3px, 0);
+   -ms-transform: translate(-3px, 0);
+   -o-transform: translate(-3px, 0);
+   transform: translate(-3px, 0);
+}
+
+.cards .card {
+   position: relative;
+   padding: 35px 20px 55px;
+   text-align: center;
+
+   transition-property: all;
+   transition-duration: 230ms;
+
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   -o-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+}
+
+.cards .card-image {
+   margin: 20px;
+   min-height: 170px;
+}
+
+.cards .title {
+   font-size: 30px;
+   line-height: 50px;
+   margin-bottom: 0;
+   margin-top: 0;
+   font-weight: 900;
+}
+
+.cards .description {
+   font-size: 17px;
+   line-height: 25px;
+   padding: 0;
+   margin: 5px auto 25px;
+   max-width: 400px;
+   }
+
+.btn {
+   display: inline-block;
+   padding: 15px 22px;
+   background-color: #2DB27C;
+   color: #FFFFFF;
+   font-size: 17px;
+   font-weight: 700;
+   line-height: 1;
+   text-decoration: none;
+   text-align: center;
+
+   text-shadow: 
+      0 1px 1px rgba(0, 0, 0, 0.1);
+   box-shadow: 
+      0px 2px 0px #2ab27b;
+
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+.btn:hover {
+      box-shadow: 
+         0 2px 0 #20865d;
+}
+
+@media screen and (min-width: 701px) {
+   .cards .card:hover {
+      -webkit-transform: scale(1.045);
+      -moz-transform: scale(1.045);
+      -ms-transform: scale(1.045);
+      -o-transform: scale(1.045);
+      transform: scale(1.045);
+      
+      background-color: #FFFFFF;
+      box-shadow: 
+         0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .cards {
+      margin-bottom: 20px;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .cards .card-container {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0);
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .cards .card:nth-child(1) {
+      background-color: #F4F7FA;
+      margin-bottom: 30px;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .btn {
+      width: 100%;
+   }
+}
+
+
+
+

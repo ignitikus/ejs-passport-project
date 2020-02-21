@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Now Playing</title>
+      <%- include ../partials/head %> 
+   </head>
+   <body class="movies-body">
+      <div class="container-alt">
+         <header>Movies Now Playing</header> 
+         <% include ../partials/userAndBack %> 
+         <% data.forEach(({title,poster_path,backdrop_path,overview})=>{ %>
+         <section style="background-image: url('<%=`https://image.tmdb.org/t/p/original${backdrop_path}`%>' );
+         " class="backdrop">
+            <movie> <%= title %> </movie>
+            <overview> <%= overview %>  </overview>
+         </section>
+         <%})%>
+         <%- include ../partials/footer %> 
+      </div>
+
+   </body>
+</html>

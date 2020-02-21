@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Randos</title>
+      <%- include ../partials/head  %> 
+   </head>
+   <body>
+      <header>Random Profiles</header>
+      <% include ../partials/userAndBack %> 
+      <div class="container">
+         <% data.forEach(({picture:{large}, name:{first,last}})=>{ %>
+            <div class="profile">
+               <img src= <%= large %> class="profile-pic" alt="...">
+               <h2 class=""> <%= `${first} ${last}` %> </h5>
+            </div>
+         <%})%>
+      </div>
+
+      <%- include ../partials/footer %> 
+   </body>
+</html>
